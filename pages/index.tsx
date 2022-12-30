@@ -1,11 +1,17 @@
+import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
+import Banner from "../components/Banner";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [btnText, setBtnText] = useState("Get Started");
+
+  const handleOnClick = () => {
+    setBtnText("Clicked");
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +27,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Coffee Connoisseur</h1>
+        <Banner btnText={btnText} handleOnClick={handleOnClick} />
       </main>
 
       <footer className={styles.footer}>

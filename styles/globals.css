@@ -85,6 +85,8 @@ body {
   overflow-x: hidden;
 
   background: url("/static/mesh-gradient.png") center center/cover;
+  color: #373b64;
+  height: 100%;
 }
 
 body {
